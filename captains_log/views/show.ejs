@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Log</title>
+</head>
+<body>
+    <h1>Your Log</h1>
+        <p>
+            <%=captLogs.title%>
+        </p>
+        <p>
+            <%=captLogs.entry%>
+        </p>
+    <p>
+        <% if (captLogs.shipIsBroken === true) { %>
+            <span> The ship is broken again </span>
+          <% } else { %>
+            <span> Ship is good today! </span>
+          <% } %>
+    </p>
+    <p>
+        <%=captLogs.createdAt%>
+    </p>
+    <a href="/logs">Back to Index</a>
+</body>
+</html>
